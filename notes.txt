@@ -5,3 +5,17 @@ npm install - installs needed dependencies
 npm update - update/upgrade those dependencies
 package.json - holds the project details like dependencies, repo, version number, desc
 using --save will automaticall update the package json
+
+// how to create a react app
+npx create-react-app nameofapp
+
+// how to run it...cd into folder and simply
+// should open up browser on port 3000
+npm start
+
+// add in what you get fetch - way todo http methods
+npm install --save whatwg-fetch
+
+what is linting?  a linter?
+process for running a program to analyse code for error
+hmm...sounds like a different name of intellisense
