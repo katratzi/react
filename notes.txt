@@ -1,0 +1,7 @@
+react.js
+
+current version - node -v  
+npm install - installs needed dependencies
+npm update - update/upgrade those dependencies
+package.json - holds the project details like dependencies, repo, version number, desc
+using --save will automaticall update the package json
