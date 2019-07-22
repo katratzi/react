@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Is this just real life?",
+        "content": "Pariatur Lorem sint pariatur nulla culpa amet do consectetur nostrud eiusmod.",
+        "slug": "hello world"
+    },
+    {
+        "id": 2,
+        "title": "Is this just Fantasy?",
+        "content": "Mollit exercitation officia fugiat sint eiusmod consectetur.",
+        "slug": "hello world"
+    }
+]

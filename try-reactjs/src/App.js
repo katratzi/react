@@ -1,6 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import PostList from "./posts/PostList";
+import PostData from "./data/posts.json";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -18,6 +20,15 @@ function App() {
         >
           Learn React
         </a>
+        <PostList />
+        {PostData.map((postDetail, index) => {
+          return (
+            <div>
+              <h1>{postDetail.title}</h1>
+              <p>{postDetail.content}</p>
+            </div>
+          );
+        })}
       </header>
     </div>
   );
