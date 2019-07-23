@@ -19,3 +19,7 @@ npm install --save whatwg-fetch
 what is linting?  a linter?
 process for running a program to analyse code for error
 hmm...sounds like a different name of intellisense
+
+// using props...two different ways of setting the prop value
+const { post } = this.props;
+const post = this.props.post;
