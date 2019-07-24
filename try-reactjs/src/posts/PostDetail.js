@@ -11,8 +11,9 @@ class PostDetail extends Component {
     event.preventDefault();
     const { dataCallback } = this.props;
     console.log(dataCallback);
+    const { post } = this.props;
     if (dataCallback !== undefined) {
-      dataCallback("hello world!");
+      dataCallback("hello world!", post.content);
     }
   }
 
