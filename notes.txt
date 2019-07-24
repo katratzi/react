@@ -23,3 +23,17 @@ hmm...sounds like a different name of intellisense
 // using props...two different ways of setting the prop value
 const { post } = this.props;
 const post = this.props.post;
+
+// add on click event :)
+onClick={}
+
+// rewrote this...into ES6
+function App() {
+   return (
+// to
+class App extends Component {
+  render() {
+
+React treats components starting with lowercase letters as DOM tags. 
+For example, <div /> represents an HTML div tag, 
+but <Welcome /> represents a component and requires Welcome to be in scope.
