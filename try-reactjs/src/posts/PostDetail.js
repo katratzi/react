@@ -9,8 +9,11 @@ class PostDetail extends Component {
 
   titleWasClicked(event) {
     event.preventDefault();
-    alert(this.props);
-    console.log(this.props);
+    const { dataCallback } = this.props;
+    console.log(dataCallback);
+    if (dataCallback !== undefined) {
+      dataCallback("hello world!");
+    }
   }
 
   render() {
