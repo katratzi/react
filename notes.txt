@@ -42,3 +42,5 @@ const - constant, define when used and can't change
 let - can change after - has 'block scope' - think c# {}
 var - older syntax...more of a global thing. - no block scope - think brackets in c#
 
+// this syntax seems a bit weird.  Not using =
+this.setState({ showContent: !this.state.showContent });

@@ -4,6 +4,7 @@ import PostList from "./posts/PostList";
 
 import "./App.css";
 import ConstLetVar from "./learn/ConstLetVar";
+import PostDetail from "./posts/PostDetail";
 
 // function App() {
 //   return (
@@ -21,7 +22,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <ConstLetVar />
+          <PostList />
         </header>
       </div>
     );
