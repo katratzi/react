@@ -6,16 +6,26 @@ class PostDetail extends Component {
     super(props);
     this.titleWasClicked = this.titleWasClicked.bind(this);
     this.toggleContent = this.toggleContent.bind(this);
-    this.state = { showContent: true };
+    this.state = {
+      showContent: true,
+      postItem: null
+    };
   }
 
   titleWasClicked(event) {
     event.preventDefault();
     const { dataCallback } = this.props;
-    console.log(dataCallback);
-    const { post } = this.props;
+    const newPostItem = {
+      title: "New Title",
+      // content: this.state.postItem.content
+      content: this.state.postItem.content
+    };
+    this.setState({
+      postItem: newPostItem
+    });
+
     if (dataCallback !== undefined) {
-      dataCallback("hello world!", post.content);
+      dataCallback(newPostItem);
     }
   }
 
@@ -24,16 +34,28 @@ class PostDetail extends Component {
     this.setState({ showContent: !this.state.showContent });
   }
 
-  render() {
+  componentDidMount() {
     const { post } = this.props;
-    //   const post = this.props.post;
+    this.setState({
+      postItem: post
+    });
+  }
+
+  render() {
+    const { postItem } = this.state;
     const { showContent } = this.state;
     return (
       <div>
-        <h1 onClick={this.titleWasClicked}>{post.title}</h1>
-        {showContent === true ? <p>{post.content}</p> : ""}
+        {postItem !== null ? (
+          <div>
+            <h1 onClick={this.titleWasClicked}>{postItem.title}</h1>
+            {showContent === true ? <p>{postItem.content}</p> : ""}
 
-        <button onClick={this.toggleContent}>Toggle Content Display</button>
+            <button onClick={this.toggleContent}>Toggle Content Display</button>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     );
   }
