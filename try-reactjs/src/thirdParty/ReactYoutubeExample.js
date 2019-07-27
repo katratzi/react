@@ -6,10 +6,12 @@ class ReactYoutubeExample extends React.Component {
   videoOnReady(event) {
     // access to player in all event handlers via event.target
     //event.target.pauseVideo();
-      const player = event.target;
-      this.setState({
-          playerObj: player;
-      })
+    const player = event.target;
+    // this last bit doesn't work..hmm
+    // somethign to do with a needed 'bind'
+    // this.setState({
+    //   playerObj: player
+    // });
     event.target.seekTo(50); // 50s
     console.log(event.target);
   }
@@ -25,11 +27,11 @@ class ReactYoutubeExample extends React.Component {
     console.log(player);
   }
 
-    componentWillUnmount() {
-        const { playerObj } = this.state
-        console.log(player.getCurrentTime())
-    }
-    
+  //   componentWillUnmount() {
+  //     const { playerObj } = this.state;
+  //     console.log(playerObj.getCurrentTime());
+  //   }
+
   render() {
     const opts = {
       height: "390",
