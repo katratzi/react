@@ -1,10 +1,11 @@
 import React from "react";
-import ReactComp, { Component } from "react";
-import PostList from "./posts/PostList";
+//import ReactComp, { Component } from "react";
+//import PostList from "./posts/PostList";
+// import ConstLetVar from "./learn/ConstLetVar";
+// import PostDetail from "./posts/PostDetail";
+import ReactYoutubeExample from "./thirdParty/ReactYoutubeExample";
 
 import "./App.css";
-import ConstLetVar from "./learn/ConstLetVar";
-import PostDetail from "./posts/PostDetail";
 
 // function App() {
 //   return (
@@ -17,9 +18,13 @@ import PostDetail from "./posts/PostDetail";
 // }
 
 // ES6 coding
-class App extends Component {
+class App extends React.Component {
   render() {
-    return <PostList />;
+    return (
+      <div>
+        return <ReactYoutubeExample videoId="6vCKWxqyRf4" />;
+      </div>
+    );
   }
 }
 
