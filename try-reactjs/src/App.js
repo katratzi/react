@@ -3,7 +3,8 @@ import React from "react";
 //import PostList from "./posts/PostList";
 // import ConstLetVar from "./learn/ConstLetVar";
 // import PostDetail from "./posts/PostDetail";
-import ReactYoutubeExample from "./thirdParty/ReactYoutubeExample";
+//import ReactYoutubeExample from "./thirdParty/ReactYoutubeExample";
+import ReactMarkdownExample from "./thirdParty/ReactMarkdownExample";
 
 import "./App.css";
 
@@ -20,9 +21,12 @@ import "./App.css";
 // ES6 coding
 class App extends React.Component {
   render() {
+    const input =
+      "<h1>Hello World</h1> \n\n# [This](http://www.icypath.com) is a header\n\nAnd this is a paragraph http://www.bing.com";
     return (
       <div>
-        return <ReactYoutubeExample videoId="6vCKWxqyRf4" />;
+        {/* return <ReactYoutubeExample videoId="6vCKWxqyRf4" />; */}
+        <ReactMarkdownExample input={input} />;
       </div>
     );
   }
