@@ -44,3 +44,5 @@ var - older syntax...more of a global thing. - no block scope - think brackets i
 
 // this syntax seems a bit weird.  Not using =
 this.setState({ showContent: !this.state.showContent });
+
+//push (add to list)  pop (remove from list)

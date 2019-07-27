@@ -6,20 +6,25 @@ class PostDetail extends Component {
     super(props);
     this.titleWasClicked = this.titleWasClicked.bind(this);
     this.toggleContent = this.toggleContent.bind(this);
+    this.handleRemoveContentButton = this.handleRemoveContentButton.bind(this);
     this.state = {
       showContent: true,
       postItem: null
     };
   }
 
+  handleRemoveContentButton(event) {
+    event.preventDefault();
+    if (this.props.didHandleRemove) {
+      this.props.didHandleRemove(this.props.post);
+    }
+  }
+
   titleWasClicked(event) {
     event.preventDefault();
     const { dataCallback } = this.props;
-    const newPostItem = {
-      title: "New Title",
-      // content: this.state.postItem.content
-      content: this.state.postItem.content
-    };
+    let newPostItem = this.props.post;
+    newPostItem["title"] = "My New Title";
     this.setState({
       postItem: newPostItem
     });
@@ -52,6 +57,9 @@ class PostDetail extends Component {
             {showContent === true ? <p>{postItem.content}</p> : ""}
 
             <button onClick={this.toggleContent}>Toggle Content Display</button>
+            <button onClick={this.handleRemoveContentButton}>
+              Remove Content
+            </button>
           </div>
         ) : (
           ""

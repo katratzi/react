@@ -19,13 +19,7 @@ import PostDetail from "./posts/PostDetail";
 // ES6 coding
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <PostList />
-        </header>
-      </div>
-    );
+    return <PostList />;
   }
 }
 
